@@ -13,16 +13,16 @@ namespace ConsoleApp
             Console.WriteLine();
             Console.WriteLine();
 
-            Console.WriteLine("dit programma beweegt je muis tussen 2 random intervallen. geef je minimale en maximale interval door in milliseconden. (voorbeeld ik wil dat mijn muis tussen 1 en 5 seconden beweegt min = 1000 en max = 5000)");
+            Console.WriteLine("This program moves your mouse between an user generated interval (input time in ms).");
             Console.WriteLine();
-            Console.WriteLine("Om programma af te sluiten CONTROL + C");
+            Console.WriteLine("To exit program press CONTROL + C");
             Console.WriteLine();
             Console.WriteLine("===========================================");
             Console.WriteLine();
 
-            Console.WriteLine("please enter min milliseconds for moving pointer");
+            Console.WriteLine("Please enter minimum milliseconds and press enter");
             var minTime = Console.ReadLine();
-            Console.WriteLine("please enter max milliseconds for moving pointer");
+            Console.WriteLine("Please enter maximum milliseconds and press enter");
             var maxTime = Console.ReadLine();
 
             if (!Int32.TryParse(minTime, out int min))
