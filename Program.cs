@@ -25,6 +25,7 @@ namespace ConsoleApp
             Console.WriteLine("Please enter maximum milliseconds and press enter");
             var maxTime = Console.ReadLine();
 
+            // if user input was not a number take defaults
             if (!Int32.TryParse(minTime, out int min))
                 min = 1000;
             if (!Int32.TryParse(minTime, out int max))
@@ -34,19 +35,21 @@ namespace ConsoleApp
             {
                 Console.WriteLine();
 
-                // get widht height of console window
+                // declare space of movement for mouse pointer
                 int height = 1080;
                 int width = 1920;
 
-                // get pointer position
+                // get current pointer position
                 Point defPnt = new Point();
                 GetCursorPos(ref defPnt);
                 
-                // set pointer position
+                // set pointer to new position
                 SetCursorPos(new Random().Next(width), new Random().Next(height));
 
+                // write pointer position to console
                 Console.WriteLine($"X pointer= {defPnt.X.ToString()}, Y pointer= {defPnt.Y.ToString()}");
 
+                // wait x-time (user generated interval) before next mouse movement
                 Thread.Sleep(new Random().Next(min, max));
             }
         }
