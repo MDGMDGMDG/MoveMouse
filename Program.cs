@@ -9,10 +9,10 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
+            // display information about program to user in the console
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-
             Console.WriteLine("This program moves your mouse between an user generated interval (input time in ms).");
             Console.WriteLine();
             Console.WriteLine("To exit program press CONTROL + C");
@@ -20,6 +20,7 @@ namespace ConsoleApp
             Console.WriteLine("===========================================");
             Console.WriteLine();
 
+            // ask for user input for the time interval between mouse movements
             Console.WriteLine("Please enter minimum milliseconds and press enter");
             var minTime = Console.ReadLine();
             Console.WriteLine("Please enter maximum milliseconds and press enter");
